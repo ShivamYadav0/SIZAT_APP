@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+<div align="center">
+    <img src="https://github.com/vitelabs/doc.vite.org/blob/master/docs/.vuepress/public/logo_black.svg" alt="Logo" width='300px' height='auto'/>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
 
-## Available Scripts
+[Vite](https://vite.org) is a next-generation Reactive Blockchain that adopts a _message-driven, asynchronous architecture and a DAG-based ledger_.
+The goal for Vite’s design is to _provide a reliable public platform for industrial dApps_, with features of ultra-high throughput and scalability.
 
-In the project directory, you can run:
+## Go Vite
 
-### `npm start`
+Official golang implementation of Vite Protocol
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![GitHub release](https://img.shields.io/github/release/vitelabs/go-vite.svg)](https://github.com/vitelabs/go-vite/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/vitelabs/go-vite)](https://goreportcard.com/report/github.com/vitelabs/go-vite)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/vitelabs/go-vite.svg)](https://github.com/vitelabs/go-vite/pulls)
+[![Downloads](https://img.shields.io/github/downloads/vitelabs/go-vite/total.svg)](https://github.com/vitelabs/go-vite/releases)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+The go-vite binary files can be download from [releases](https://github.com/vitelabs/go-vite/releases).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Guides & Documentation
+   * [White Paper](https://github.com/vitelabs/whitepaper/blob/master/vite_en.pdf)
+   * [Documentation](https://docs.vite.org)
+   * [Techblog](https://docs.vite.org/vite-docs/articles/)
+   * [Runing a node](https://vite.wiki/tutorial/node/install.html) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Product
+   * [Products Navigation](https://vite.net)
+   * [Web Wallet](https://wallet.vite.net)
+   * [Desktop Wallet](https://github.com/vitelabs/vite-wallet)
+   * [Wallet App](https://app.vite.net) open through mobile browser
+   * [Block Explorer](https://vitescan.io/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Links & Resources
+   * [Project Vite official Website](https://www.vite.org/)
+   * [Vite products](https://vite.net)
+   * [Twitter](https://twitter.com/vitelabs)
+   * [Telegram](https://t.me/vite_en)
+   * [Telegram Announcement](https://t.me/vite_ann)
+   * [Reddit](https://www.reddit.com/r/vitelabs)
+   * [Discord](https://discordapp.com/invite/CsVY76q)
+   * [Youtube](https://www.youtube.com/channel/UC8qft2rEzBnP9yJOGdsJBVg)
+   * [Forum](https://forum.vite.net/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+You can choose one of the following installation options:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Install from binary](https://docs.vite.org/vite-docs/tutorial/node/install.html#install-from-binary)
+- [Install from source](https://docs.vite.org/vite-docs/tutorial/node/install.html#install-from-source)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Faster ledger sync
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[download](ledger_snapshot.md) gvite ledger file manually.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Versioning
 
-## Learn More
+Given a version number MAJOR.MINOR.BUILD, increment the:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. MAJOR version when you make a significant update of the protocol (like Ethereum, Ethereum 2.0 is rather a new blockchain from Ethereum 1.0),
+2. MINOR version when you introduce some breaking changes, and
+3. BUILD version when you make non-breaking changes such as bug fixes, RPC modifications, code refactoring, test updates, etc.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Branching
 
-### Code Splitting
+The `master` branch is the working branch for the next release. 
+- Breaking changes should not be merged into `master` unless as described below.
+- Non-breaking changes should be merged into `master`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1) A new branch should be checked out from `master` before releasing a new version. 
+    - Say the latest version running on mainnet is 2.12.2, we can checkout a branch named `release_v2.12.3` from `master` for building, deploying on testnet, releasing the binary and deploying on mainnet.
 
-### Analyzing the Bundle Size
+2) A development branch for the next breaking changes, for example `v2.13`, will be checked out from `master`. 
+    - Any commits from `master` are required to be merged into `v2.13` (or rebase `v2.13` onto `master`) as soon as possible. 
+    - All unit tests and integration tests should pass before merging a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3) Merge `v2.13` into `master` and checkout `release_v2.13.0` from `master` before the mainnet upgrade. 
+    - This means that v2.13.0 is the next release and there are no more releases of version 2.12.x. 
+    - The branch `v2.13` reached end-of-life and a new branch `v2.14` for the next breaking changes should be checked out from `master`.
+    - From this point onwards, any new commits which are merged into `master` are based on version 2.13.
 
-### Making a Progressive Web App
+Any changes should be committed to your personal fork followed by opening a PR in the official repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contribution
 
-### Advanced Configuration
+Thank you for considering to help out with the source code! We welcome any contributions no matter how small they are!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+If you'd like to contribute to go-vite, please fork, fix, commit and send a pull request for the maintainers to review and merge into the main code base.
 
-### Deployment
+Please make sure your contributions adhere to our coding guidelines:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Code must adhere to the official Go [formatting](https://golang.org/doc/effective_go.html#formatting) guidelines.
+- Code must be documented adhering to the official Go [commentary](https://golang.org/doc/effective_go.html#commentary) guidelines.
+- Pull requests need to be based on and opened against the `master` branch.
+- Open an issue before submitting a PR for non-breaking changes.
+- Publish a VEP proposal before submitting a PR for breaking changes.
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The go-vite source code is licensed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html), also included in the `LICENSE` file.
