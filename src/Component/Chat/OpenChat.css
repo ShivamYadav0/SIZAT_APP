@@ -1,0 +1,150 @@
+#message-form {
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+  width:83%;
+  margin-left:60px;
+}
+
+#userImg {
+  width:40px; 
+  height:40px; 
+  border-radius:100%;
+}
+h2 {
+color: #ff0000;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 27px #0fa,
+      0 0 34px #0fa,
+      0 0 39px #0fa,
+      0 0 46px #0fa,
+      0 0 50px #0fa;
+}
+
+#chat #message-input {
+    width: 70%;
+ height:35px;
+background: #fcfcdc;
+font-weight:bold;
+font-size:110%;
+border-radius:10px;
+overflow-y: auto;
+}
+
+#chat #message-btn{
+    width: 18%;
+    height: 40px;
+font-size:110%; 
+color:red;
+background:blue;
+border-radius:15px;
+transform:translateY(-43%);
+}
+#messages {
+margin:2px;
+display:flex;
+flex-direction: column;
+font-size:105%;
+
+height:85%; 
+margin-left:70px;
+overflow-y: auto;
+}
+
+#messages li {
+  overflow:auto;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    background-color: #6929ca;
+    border-radius: 10px;
+    color: white;
+    max-width:85%;
+   font-size:100%;
+}
+
+#messages li span {
+    font-style: italic;
+    font-weight: bolder;
+    color: #b5b0b9;
+    cursor: pointer;
+}
+.times{
+ float:right;
+  background: transparent;
+display:block;
+text-align:right;
+width:100%;
+margin-top:-5px;
+margin-bottom:20px;
+}
+.timer{
+  width:100%;
+  float:left;
+  margin-left:0;
+  display:block;
+text-align:left;
+margin-top:-5px;
+margin-bottom:20px;
+  background: transparent;
+}
+
+.sent {
+display:inline-block;
+    text-align: left;
+    background-color: #a79cb3;
+    margin-left: 10%;
+padding:5px;
+}
+
+.sent span {
+   margin-left: 4px;
+   color: #6929ca;
+}
+#messages li.sent{
+float:right;
+}
+#messages li.receive {
+background-color:green;
+color: #ffffff;
+margin-right:40px;
+}
+
+.receive {
+display: inline-block;
+text-align: left;
+margin-left:-40px;
+float :left;
+padding:5px;
+color: red;
+
+}
+.receive span {
+   margin-left: 4px;
+    
+}
+#messages li.receive span {
+color: #ffff33;
+}
+#messages li.sent span {
+color: #27ff55;
+}
+
+@media only screen and (min-width: 770px) 
+{
+#messages{
+  margin-left:80px;
+  height:90%;
+  padding: 5%;
+}
+ #chat #message-input {
+    height:55px; 
+  }
+   #chat #message-btn {
+    height:55px; 
+  
+  }
+}

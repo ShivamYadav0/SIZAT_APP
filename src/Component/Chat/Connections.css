@@ -1,0 +1,63 @@
+
+
+#connection #connected-users {
+ display:flex; 
+ flex-direction: column;
+ width:95%;
+ margin-top:60px;
+ margin-left:80px;
+ height:95%;
+ position:fixed;
+ overflow-y:auto;
+}
+#ubox #btadd {
+  width:300px;
+}
+#connection #connected-users #receivers{
+  display:flex; 
+  width:100%;
+  margin:3px 3px;
+  padding:0 5px;
+}
+#connection #connected-users #receivers p{
+  margin-left:30px;
+  font-size: 20px;
+}
+#connection #connected-users img {
+  width:70px; 
+  height:70px; 
+  border-radius :100%;
+}
+#connection #search {
+  padding-top:20px;
+  height:50px;
+  width:100%;
+  margin-left:80px;
+  position:fixed;
+z-index:777;
+}
+#connection #search .icon{
+  transform: translateY(1px);
+  color:white;
+}
+#connection #search input{
+  background: yellow;
+  margin-left:20px;
+  float:left;
+  width:30%;
+  border:none;
+  border-radius:30px;
+  color:red;
+} 
+#connection #search .search-inpbtn{
+  border-radius:30px;
+  width: 10%;
+  max-width:100px;
+  height: 20px;
+  background:blue;
+  float:left;
+  border:none; 
+  margin-left:12px;
+}
+
+/*Resize the wrap to see the search bar change!*/

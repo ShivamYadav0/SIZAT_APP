@@ -1,0 +1,150 @@
+#ProfileCard #message-form{
+  text-align: center;
+  position: fixed;
+  bottom: 5px;
+width:83%;
+margin-left:60px;
+}
+
+#ProfileCard #userImg {
+width:40px; 
+height:40px; 
+border-radius:100%;
+}
+#ProfileCard h2 {
+color: #ff0000;
+text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 27px #0fa,
+    0 0 34px #0fa,
+    0 0 39px #0fa,
+    0 0 46px #0fa,
+    0 0 50px #0fa;
+}
+
+#ProfileCard #chat #message-input {
+  width: 68%;
+height:35px;
+background: #fcfcdc;
+font-weight:bold;
+font-size:110%;
+border-radius:10px;
+overflow-y: auto;
+}
+
+#ProfileCard #chat #message-btn{
+  width: 18%;
+  height: 40px;
+font-size:110%; 
+color:red;
+background:blue;
+border-radius:15px;
+transform:translateY(-43%);
+}
+#ProfileCard #messages {
+margin:2px;
+display:flex;
+flex-direction: column;
+font-size:105%;
+
+height:85%; 
+margin-left:70px;
+overflow-y: auto;
+}
+
+#ProfileCard #messages li {
+overflow:auto;
+  list-style-type: none;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  background-color: #6929ca;
+  border-radius: 10px;
+  color: white;
+  max-width:85%;
+ font-size:100%;
+}
+
+#ProfileCard #messages li span {
+  font-style: italic;
+  font-weight: bolder;
+  color: #b5b0b9;
+  
+}
+#ProfileCard .times{
+float:right;
+background: transparent;
+display:block;
+text-align:right;
+width:100%;
+margin-top:-5px;
+margin-bottom:20px;
+}
+#ProfileCard .timer{
+width:100%;
+float:left;
+margin-left:0;
+display:block;
+text-align:left;
+margin-top:-5px;
+margin-bottom:20px;
+background: transparent;
+}
+
+#ProfileCard .sent {
+display:inline-block;
+  text-align: left;
+  background-color: #a79cb3;
+  margin-left: 10%;
+padding:5px;
+}
+
+#ProfileCard .sent span {
+ margin-left: 4px;
+ color: #6929ca;
+}
+#ProfileCard #messages li.sent{
+float:right;
+}
+#ProfileCard #messages li.receive {
+background-color:green;
+color: #ffffff;
+margin-right:40px;
+}
+
+#ProfileCard .receive {
+display: inline-block;
+text-align: left;
+margin-left:-40px;
+float :left;
+padding:5px;
+color: red;
+
+}
+#ProfileCard .receive span {
+ margin-left: 4px;
+  
+}
+#ProfileCard #messages li.receive span {
+color: #ffff33;
+}
+#ProfileCard #messages li.sent span {
+color: #27ff55;
+}
+
+@media only screen and (min-width: 770px) 
+{
+#ProfileCard #messages{
+margin-left:80px;
+height:90%;
+padding: 5%;
+}
+#ProfileCard #chat #message-input {
+  height:55px; 
+}
+ #ProfileCard #chat #message-btn {
+  height:55px; 
+
+}
+}

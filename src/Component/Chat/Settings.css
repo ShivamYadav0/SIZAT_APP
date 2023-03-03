@@ -1,0 +1,31 @@
+
+
+#setting{
+  margin-top:50px;
+  margin-left:60px;
+  display:flex; 
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+#setting input {
+  width:75%;
+  height:30px;
+  max-width: 40vw;
+}
+#setting #abouts{
+  border-radius:15px;
+}
+#setting #fname {
+  border-radius:15px;
+}
+#setting img {
+width : 100px;
+border-radius: 97%;
+height:100px;}
+#setting button {
+  margin-top:-6px;
+  background:green;
+  width:100px;
+  border-radius:15px;
+}
